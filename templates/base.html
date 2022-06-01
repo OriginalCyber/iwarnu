@@ -114,7 +114,7 @@
     Lorem Ipsumv">
 
       <li class="nav-item">
-        <a class="nav-link " href="{% url 'index' %}">
+        <a class="nav-link " href="{% url 'show' %}">
           <i class="bi bi-grid"></i>
           <span>Home</span>
         </a>
@@ -192,7 +192,7 @@
       <h1>{% block title%}{% endblock title%}</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'show' %}">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
@@ -210,51 +210,7 @@
           
 <!-- News & Updates Traffic --><!-- News & Updates Traffic --><!-- News & Updates Traffic --><!-- News & Updates Traffic -->
           
-            {% block choice %}{% endblock %}  
-
-          <!-- News & Updates Traffic -->
-          <div class="card">
-            <div class="card-body pb-0">
-              <div class="news">
-                <div class="post-item clearfix">
-                  <img src="{% static 'assets/img/1.png'%}" alt="{% url 'urgent' %}">
-                  <br>
-                  <h5><a href="{% url 'urgent' %}">Urgent</a></h5>
-                  <p>ยิงกัน, ปล้นชิงทรัพย์, อุบัติเหตุร้ายแรง,  </p>
-                </div>
-              </div><!-- End sidebar recent posts-->
-            </div>
-          </div><!-- End News & Updates -->
-
-
-          <!-- News & Updates Traffic -->
-          <div class="card">
-            <div class="card-body pb-0">
-              <div class="news">
-                <div class="post-item clearfix">
-                  <img src="{% static 'assets/img/2.png'%}" alt="{% url 'low' %}">
-                  <br>
-                  <h4><a href="{% url 'low' %}">Low</a></h4>
-                  <p>ล่วงละเมิดทางเพศ, อุบัติเหตุเล็ก, ทะเลาะวิวาท, </p>
-                </div>
-              </div><!-- End sidebar recent posts-->
-            </div>
-          </div><!-- End News & Updates -->
-
-
-          <!-- News & Updates Traffic -->
-          <div class="card">
-            <div class="card-body pb-0">
-              <div class="news">
-                <div class="post-item clearfix">
-                  <img src="{% static 'assets/img/3.png'%}" alt="">
-                  <br>
-                  <h4><a href="{% url 'medium' %}">Medium</a></h4>
-                  <p>หลอกลวงด้านการเงิน, หลอกจำหน่ายสินค้าออนไลน์, ข่าวปลอม Fake News, พนันออนไลน์</p>
-                </div>
-              </div><!-- End sidebar recent posts-->
-            </div>
-          </div><!-- End News & Updates -->
+          
 
 
 
