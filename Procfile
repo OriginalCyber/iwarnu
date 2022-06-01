@@ -1,1 +1,1 @@
-web: gunicorn djangoHeroku.wsgi
+web: gunicorn iwarnu.wsgi
