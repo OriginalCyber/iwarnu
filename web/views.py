@@ -8,5 +8,5 @@ def process(request):
     return render(request,'process.php')
 
 
-#def save(request):
-    return render(request,'save.php')
+def post(request):
+    return render(request,'post.js')

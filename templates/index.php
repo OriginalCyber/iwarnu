@@ -3,6 +3,9 @@
 <html lang="en">
 
 <head>
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>I WARN U</title>
@@ -30,9 +33,41 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
 </head>
 
 <body>
+
+
+<script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAScRewEazLIcw0TuJLo6CVAmx9hKoFtXo",
+          authDomain: "iwarnu-c6fce.firebaseapp.com",
+          databaseURL: "https://iwarnu-c6fce-default-rtdb.firebaseio.com",
+          projectId: "iwarnu-c6fce",
+          storageBucket: "iwarnu-c6fce.appspot.com",
+          messagingSenderId: "860115877730",
+          appId: "1:860115877730:web:b5fbf6ce8bde1ce58a763b",
+          measurementId: "G-SFRVNW8DTQ"
+        };
+          // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        </script> 
+
+
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
@@ -91,31 +126,7 @@
           <span>Home</span>
         </a>
       </li><!-- End Dashboard Nav -->
-      <li class="nav-heading">Pages</li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
+      
       </li><!-- End Blank Page Nav -->
     </ul>
   </aside><!-- End Sidebar-->
@@ -148,6 +159,9 @@
           <div class="col-lg-8">
             <div class="row">
 
+
+
+
               <!-- Sales Card -->
               
   <!-- News & Updates Traffic --><!-- News & Updates Traffic --><!-- News & Updates Traffic --><!-- News & Updates Traffic -->
@@ -161,139 +175,54 @@
                     <div class="post-item clearfix">
                        <!--<img src="{% static 'assets/img/1.png'%}" alt="{% url 'index' %}">-->
                       <br>
-                      <h5><a href="{% url 'index' %}">Urgent</a></h5>
-                    
-                      <p>ยิงกัน, ปล้นชิงทรัพย์, อุบัติเหตุร้ายแรง,  </p>
+                      <h5><a href="{% url 'index' %}">กรุณากรอกข้อมูล</a></h5><br><br>
                       
-                                            
-
-
-                      <!-- เขียนตรงนี้ -->
+                        <!-- เขียนตรงนี้ -->
 
 
 
+                      <div class="container">
+                        <ul id="posList">
 
-                      <form name=“form name" method="post" action="process.php">
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">ความรุนแรง</option>
-                        <option value="1">ร้ายแรง</option>
-                        <option value="2">ปานกลาง</option>
-                        <option value="3">ไม่ร้ายแรง</option>
-                      </form>
-                      </select>
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" aria-label="Default select example">
-                        <option selected="">ยิงกัน</option>
-                        <option value="1">ปล้นชิงทรัพย์</option>
-                        <option value="2">อุบัติเหตุร้ายแรง</option>
-                        <option value="3">ล่วงละเมิดทางเพศ</option>
-                        <option value="3">อุบัติเหตุเล็ก</option>
-                        <option value="3">ทะเลาะวิวาท</option>
-                        <option value="3">หลอกลวงด้านการเงิน</option>
-                        <option value="3">หลอกจำหน่ายสินค้าออนไลน์</option>
-                        <option value="3">ข่าวปลอม Fake News</option>
-                        <option value="3">ล่วงละเมิดทางเพศ</option>
-                        <option value="3">พนันออนไลน์</option>
-                      </form>
-                      </select>  
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">จังหวัด</option>
-                      </form>
-                      </select>
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">อำเถอ</option>
-                      </form>
-                      </select>
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">ตำบล</option>
-                      </form>
-                      </select>
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">หมู่บ้าน</option>
-                      </form>
-                      </select>
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">ถนน</option>
-                      </form>
-                      </select>
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">ความรุนแรง</option>
-                      </form>
-                      </select>
-                      <br>
-                      <form action="action_page.php">
-                        ชื่อ  <br><input type="text" name="user">
-                        <br>
-                      </form>
-                      <br>
-                      <form action="action_page.php">
-                        เบอร์โทรศัพท์  <br><input type="text" name="user">
-                        <br>
-                      </form>
-                      <br>
-                      <form action="action_page.php">
-                        <textarea name="message" rows="10" cols="30">ข้อความเพิ่มเติม</textarea>
-                        <br>
-                      </form>
-                      <br>
-                      <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02">
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        <form id="addPost">
+                          <input type="text" name="articles" placeholder="แจ้งเหตุ">
+                          <br><br>
+                          <input type="text" name="location" placeholder="ที่ตั้ง">
+                          <br><br>
+                          <input type="text" name="province" placeholder="จังหวัด">
+                          <br><br>
+                          <input type="text" name="district" placeholder="อำเภอ">
+                          <br><br>
+                          <input type="text" name="road" placeholder="ถนน">
+                          <br><br>
+                          <input type="text" name="address" placeholder="ที่อยู่">
+                          <br><br>
+                          <input type="text" name="name" placeholder="ชื่อ">
+                          <br><br>
+                          <input type="text" name="phone_number" placeholder="หมายเลขโทรศัพท์">
+                          <br><br>
+
+
+                        </ul>
                       </div>
+                    
 
 
 
-                      
-                      <input type="submit" value="บันทึกข้อมูล" class="btn btn-success">
-                      </form>
                       <br>
-
-
-
-
-                      
-
-
-
-
-
-
-
-                      <!--<select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected>ความรุนแรง</option>
-                        <option value="1">ร้ายแรง</option>
-                        <option value="2">ปานกลาง</option>
-                        <option value="3">ไม่ร้ายแรง</option>
+                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
+                        <option selected="">road</option>
                       </form>
                       </select>
                       <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" aria-label="Default select example">
-                        <option selected>ความรุนแรง</option>
-                        <option value="1">ร้ายแรง</option>
-                        <option value="2">ปานกลาง</option>
-                        <option value="3">ไม่ร้ายแรง</option>
-                      </form>
-                      </select>  
-                      <br>
                       <input type="submit" value="บันทึกข้อมูล" class="btn btn-success">
+                      </form>
+                      <br>
 
 
 
 
-
-
-
-
-
-
-
-
+                    
 
 
 
@@ -324,7 +253,7 @@
   <!-- Vendor JS Files -->
   <script src="{% static 'assets/vendor/apexcharts/apexcharts.min.js'%}"></script>
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
-  <script src="{% static '/vendor/chart.js/chart.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/chart.js/chart.min.js'%}"></script>
   <script src="{% static 'assets/vendor/echarts/echarts.min.js'%}"></script>
   <script src="{% static 'assets/vendor/quill/quill.min.js'%}"></script>
   <script src="{% static 'assets/vendor/simple-datatables/simple-datatables.js'%}"></script>
@@ -333,6 +262,7 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js'%}"></script>
+  <script src="{% static 'assets/js/post.js'%}"></script>
 
 </body>
 
