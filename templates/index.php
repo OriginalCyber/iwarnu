@@ -172,7 +172,7 @@
                 <div class="card-body pb-0">
                   <div class="news">
                   <div align="center">
-                    <div class="post-item clearfix">
+                    <div class="postit-item clearfix">
                        <!--<img src="{% static 'assets/img/1.png'%}" alt="{% url 'index' %}">-->
                       <br>
                       <h5><a href="{% url 'index' %}">กรุณากรอกข้อมูล</a></h5><br><br>
@@ -184,7 +184,7 @@
                       <div class="container">
                         <ul id="posList">
 
-                        <form id="addPost">
+                        <form id="addPostit">
                           <input type="text" name="articles" placeholder="แจ้งเหตุ">
                           <br><br>
                           <input type="text" name="location" placeholder="ที่ตั้ง">
@@ -201,23 +201,13 @@
                           <br><br>
                           <input type="text" name="phone_number" placeholder="หมายเลขโทรศัพท์">
                           <br><br>
-
+                          <br>
+                          <button>ส่ง</button>
+                          <br>
 
                         </ul>
                       </div>
-                    
-
-
-
-                      <br>
-                      <select class="form-select" form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" aria-label="Default select example">
-                        <option selected="">road</option>
-                      </form>
-                      </select>
-                      <br>
-                      <input type="submit" value="บันทึกข้อมูล" class="btn btn-success">
-                      </form>
-                      <br>
+                      
 
 
 
@@ -262,7 +252,7 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js'%}"></script>
-  <script src="{% static 'assets/js/post.js'%}"></script>
+  <script src="{% static 'assets/js/postit.js'%}"></script>
 
 </body>
 

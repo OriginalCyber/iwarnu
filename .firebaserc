@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "iwarnu-c6fce"
+    "const firebaseConfig" = {
+      "apiKey": "AIzaSyAScRewEazLIcw0TuJLo6CVAmx9hKoFtXo",
+      "authDomain": "iwarnu-c6fce.firebaseapp.com",
+      "databaseURL": "https://iwarnu-c6fce-default-rtdb.firebaseio.com",
+      "projectId": "iwarnu-c6fce",
+      "storageBucket": "iwarnu-c6fce.appspot.com",
+      "messagingSenderId": "860115877730",
+      "appId": "1:860115877730:web:b5fbf6ce8bde1ce58a763b",
+      "measurementId": "G-SFRVNW8DTQ"
+    }
   }
 }

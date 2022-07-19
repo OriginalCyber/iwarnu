@@ -4,9 +4,9 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     return render(request, 'index.php')
 
-def process(request):
+def postit(request):
+    return render(request,'postit.js')
+
+####def process(request):
     return render(request,'process.php')
 
-
-def post(request):
-    return render(request,'post.js')

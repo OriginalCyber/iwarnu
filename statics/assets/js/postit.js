@@ -1,7 +1,7 @@
 let posList = document.querySelector('#posList');
-let form = document.querySelector('#addPost');
+let form = document.querySelector('#addpostit');
 
-function renderPost(doc) {
+function renderpostit(doc) {
     let li = document.createElement('li');
     let articles = document.createElement('span');
     let location = document.createElement('span');
@@ -35,16 +35,16 @@ function renderPost(doc) {
 
 }
 
-db.collection('posts').get().then(post => {
-    post.docs.forEach(doc => {
+db.collection('postit').get().then(postit => {
+    postit.docs.forEach(doc => {
         console.log(doc.data())
-        renderpost(doc);
+        renderpostit(doc);
     })
 });
 
-form.addEventListener('summit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('posts').add({
+    db.collection('postit').add({
         articles: form.articles.value,
         location: form.location.value,
         province: form.province.value,
