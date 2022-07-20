@@ -42,8 +42,7 @@
         }
     }
 
-    function sendlinemesg(){
-
+    function sendlinemesg() {
         define('LINE_API', "https://notify-api.line.me/api/notify");
         define('LINE_TOKEN', "8T59qFRASAOBYkmh2ZIUmXz23If3oSEuxrU5E2OgWp2");
 
