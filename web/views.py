@@ -7,8 +7,8 @@ def index(request):
 def indexli(request):
     return render(request, 'indexli.php')
 
-def linenotify(request):
-    return render(request,'linenotify.php')
+def line(request):
+    return render(request,'line.php')
 
 ###def postit(request):
     return render(request,'postit.js')

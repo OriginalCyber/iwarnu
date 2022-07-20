@@ -106,7 +106,7 @@
 </head>
 </body>
 
-    <form action="linenotify.php" method="POST">
+    <form action="line.php" method="POST">
         <h1>Elegant Contact Form</h1>
         <form class="cf">
         <div class="half left cf">
