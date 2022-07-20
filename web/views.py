@@ -4,9 +4,13 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     return render(request, 'index.php')
 
-def postit(request):
+def indexli(request):
+    return render(request, 'indexli.php')
+
+def linenotify(request):
+    return render(request,'linenotify.php')
+
+###def postit(request):
     return render(request,'postit.js')
 
-####def process(request):
-    return render(request,'process.php')
 
